@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="me.iz.mobility.loginextassignment.ui.activities.OrderDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingBottom="@dimen/_8dp">
+
+        <TextView
+            android:id="@+id/tvOrderNo"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="@string/order_no"
+            tools:text="Order No. 123131731987391"/>
+
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/tvOrderNo"
+            android:gravity="right"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:textColor="@android:color/black"
+            tools:text="5 Jan, 2015"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/title"
+        android:text="@string/customer_info"/>
+
+    <TextView
+        android:id="@+id/tvCustomerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        style="@style/base_padding_style"
+        tools:text="Basit Parkar"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvCustomerAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/base_padding_style"
+        tools:text="Sakar Sankul, Off Shivaji Nagar Station, Pune 5110001"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/tvPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/base_padding_style"
+        tools:text="986000000"
+        android:textSize="16sp"/>
+
+    <TextView
+        style="@style/title"
+        android:text="@string/order_status"/>
+
+    <Spinner
+        android:id="@+id/spOrderStatus"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/title"
+        android:text="@string/items"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvItems"
+        tools:listitem="@layout/listitem_order_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
